@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" href="style.css">
+ <script src="script.js" defer></script>
+</head>
+
+<body>
+<div class="contenedor">
+    <form class="formulario" action="">
+        <div class="form-header">
+            <h1 class="form-title">FORMULARIO DE CONTACTO</h1>
+        </div>
+    
+
+<label class="form-label" for="nombre">Nombre:<span class="span">*</span></label> <br>
+<input type="text" required name="nombre" id="nombre" class="form-imput" placeholder="Ingrese su nombre"><br>
+
+<label class="form-label" for="correo">Correo:<span class="span">*</span></label> <br>
+<input type="email" required name="correo" id="correo" class="form-imput" placeholder="Ingrese su correo"><br>
+
+<label class="form-label" for="teléfono">Teléfono:</label> <br>
+<input type="text" name="teléfono" id="teléfono" class="form-imput" placeholder="Ingrese su teléfono"><br>
+
+<label class="form-label" for="web">Sitio web:</label> <br>
+<input type="text" name="web" id="web" class="form-imput" placeholder="Ingrese su sitio web"><br>
+
+<label class="form-label" for="asunto">Asunto:<span class="span">*</span></label> <br>
+<input type="text" required name="asunto" id="asunto" class="form-imput" placeholder="Ingrese el asunto"><br>
+
+<label class="form-label" class="form-textarea" for="mensaje">Mensaje:<span class="span">*</span></label> <br>
+<textarea required maxlength="500" name="mensaje" id="mensaje" class="form-textarea" placeholder="Escriba aquí su mensaje..."></textarea> <br>
+
+<div class="contador" id="contador">0/500</div>
+
+<input type="submit" class="btn-submit" name="guardar" id="guardar" value="ENVIAR">
+</form>
+</div>
+</body>
+
+</html>
