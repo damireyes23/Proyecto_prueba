@@ -1,46 +1,56 @@
 <html lang="en">
-
+<!-- Cargar el Head -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de registro</title>
+    <title>Formulario de contacto</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" async></script>
 </head>
-
+<!-- Inicio del Body -->
 <body>
-    <div class="contenedor">
-        <form class="formulario" action="">
+    <div class="contenedor"> <!-- Inicio Contenedor del Form-->
+        <form method="post" class="formulario" id="formjs"> <!-- Inicio del Form -->
             
-            <div class="form-header">
-                <h1 class="form-title">FORMULARIO DE REGISTRO</h1>
-            </div>
-
+            <div class="form-header"> <!-- Inicio Contenedor del Titulo-->
+                <h1 class="form-title">FORMULARIO DE CONTACTO</h1> <!-- Titulo-->
+            </div> <!-- Fin Contenedor del Titulo-->
+            
+            <!-- Crear Espacio para colocar ASUNTO-->
             <label class="form-label" for="asunto">Asunto:<span class="span">*</span></label> <br>
             <input type="text" required name="asunto" id="asunto" class="form-imput" placeholder="Ingrese el asunto"><br>
-
+            
+            <!-- Crear Espacio para colocar CORREO-->
             <label class="form-label" for="correo">Correo electrónico:<span class="span">*</span></label> <br>
             <input type="email" required name="correo" id="correo" class="form-imput" placeholder="Ingrese su correo"><br>
 
+            <!-- Crear Espacio para colocar NOMBRE-->
             <label class="form-label" for="nombre">Nombre completo:<span class="span">*</span></label> <br>
             <input type="text" required name="nombre" id="nombre" class="form-imput" placeholder="Ingrese su nombre"><br>
 
+            <!-- Crear Espacio para colocar SITIO WEB-->
             <label class="form-label" for="web">Sitio web:</label> <br>
             <input type="text" name="web" id="web" class="form-imput" placeholder="Ingrese su sitio web"><br>
 
+            <!-- Crear Espacio para colocar TELEFONO-->
             <label class="form-label" for="teléfono">Teléfono:</label> <br>
-            <input type="text" name="teléfono" id="teléfono" class="form-imput" placeholder="Ingrese su teléfono"><br>
+            <input type="text" required name="teléfono" id="telefono" class="form-imput" placeholder="Ingrese su teléfono"><br>
 
-
+            <!-- Crear Espacio para ESCRIBIR MENSAJE-->
             <label class="form-label" class="form-textarea" for="mensaje">Mensaje:<span class="span">*</span></label> <br>
-            <textarea required maxlength="500" name="mensaje" id="mensaje" class="form-textarea" placeholder="Escriba aquí su mensaje..."></textarea> <br>
+            <textarea maxlength="500" name="mensaje" id="mensaje" class="form-textarea" placeholder="Escriba aquí su mensaje..."></textarea> <br>
 
+            <!-- Crear CONTADOR DE CARACTERES-->
             <div class="contador" id="contador">0/500</div>
 
+            <!-- Crear BOTON PARA ENVIAR DATOS-->
             <input type="submit" class="btn-submit" name="guardar" id="guardar" value="ENVIAR">
-        </form>
-    </div>
-</body>
 
+            <!-- Crear PARRAFO DINAMICO PARA MOSTRAR VALIDACIONES DE JAVASCRIPT-->
+            <P class="warnings" id="warnings"></P>
+        </form> <!-- Fin del Form-->
+    </div> <!-- Fin Contenedor del Form -->
+</body>
+<!-- Fin del body -->
 </html>
