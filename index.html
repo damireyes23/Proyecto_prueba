@@ -24,10 +24,12 @@
             <!-- Crear Espacio para colocar CORREO-->
             <label class="form-label" for="correo">Correo electrónico:<span class="span">*</span></label> <br>
             <input type="email" required name="correo" id="correo" class="form-imput" placeholder="Ingrese su correo"><br>
+            <P class="warning" id="warningmail"></P>
 
             <!-- Crear Espacio para colocar NOMBRE-->
             <label class="form-label" for="nombre">Nombre completo:<span class="span">*</span></label> <br>
             <input type="text" required name="nombre" id="nombre" class="form-imput" placeholder="Ingrese su nombre"><br>
+            <P class="warning" id="warningname"></P>
 
             <!-- Crear Espacio para colocar SITIO WEB-->
             <label class="form-label" for="web">Sitio web:</label> <br>
@@ -35,11 +37,12 @@
 
             <!-- Crear Espacio para colocar TELEFONO-->
             <label class="form-label" for="teléfono">Teléfono:</label> <br>
-            <input type="text" required name="teléfono" id="telefono" class="form-imput" placeholder="Ingrese su teléfono"><br>
+            <input type="text" name="teléfono" id="telefono" class="form-imput" placeholder="Ingrese su teléfono"><br>
+            <P class="warning" id="warningphone"></P>
 
             <!-- Crear Espacio para ESCRIBIR MENSAJE-->
             <label class="form-label" class="form-textarea" for="mensaje">Mensaje:<span class="span">*</span></label> <br>
-            <textarea maxlength="500" name="mensaje" id="mensaje" class="form-textarea" placeholder="Escriba aquí su mensaje..."></textarea> <br>
+            <textarea maxlength="500" required name="mensaje" id="mensaje" class="form-textarea" placeholder="Escriba aquí su mensaje..."></textarea> <br>
 
             <!-- Crear CONTADOR DE CARACTERES-->
             <div class="contador" id="contador">0/500</div>

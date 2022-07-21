@@ -93,6 +93,14 @@ body {
     width: 100%;
     text-align: center;
     margin: auto;
-    color: red;
+    color: rgb(43, 158, 20);
     padding-top: 20px;
+}
+
+.warning{
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+    color: red;
 }
