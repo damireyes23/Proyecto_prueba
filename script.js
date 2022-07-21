@@ -41,6 +41,7 @@ form.addEventListener("submit", e=>{
     }
     if(!regexEmail.test(correo.value)){
     warningmail += `El correo ingresado no es válido (solo se admiten dominios de GMAIL, YAHOO y Outlook). <br>`
+    correo.style.border = '1px solid red'
     entrar = true
     }
     if(!regexTelefono.test(telefono.value)){
