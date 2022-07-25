@@ -61,6 +61,7 @@ form.addEventListener("submit", e=>{
     else{
         parrafo.innerHTML = "Enviado! Nos comunicaremos con usted a la brevedad!"
         document.getElementById("formjs").reset();
+        correo.style.border = 'none'
     }
 })
 
