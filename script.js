@@ -1,59 +1,42 @@
 const input = document.getElementById("form_input")
 const button = document.getElementById("btn_submit")
-const postcontainer = document.getElementById("post_container")
+const postcontainer = document.querySelector("#post_container")
 
 button.addEventListener('click', (e) => {
     e.preventDefault()
     traerPost(input.value)
-    
 })
 
-
 function traerPost(mostrar){
+
+    // validar la información select
+    // Obtienes valor del select
     fetch(`https://jsonplaceholder.typicode.com/posts/${mostrar}/`) 
-    
     .then ((res) => res.json())
     .then((data) => {
-        crearPost(data)
- })
+        // select.value == data.userId
+        // Si es el mismo valor, imprimes resultado
+        imprimirResultado(data)
+        // Si no mensaje de no información
+        // Nueva funcion
+    })
+    .catch((res) => console.log(res))
 }
 
-function crearPost(mostrar){
-    const titulouser = document.createElement ("h1")
-    titulouser.textContent = ("User ID:")
+function imprimirResultado(data){
 
-    const h1 = document.createElement("h1")
-    h1.textContent = mostrar.userId
+    const container = document.getElementById ("post-container")
+    const userId = document.getElementById ("user-response")
+    const id = document.getElementById ("id-response")
+    const title = document.getElementById ("title-response")
+    const body = document.getElementById ("body-response")
 
-    const tituloid = document.createElement ("h1")
-    tituloid.textContent = ("ID:")
-    
-    const h3 = document.createElement("h3")
-    h3.textContent = mostrar.id
+    // SET
+    userId.textContent = data.userId;
+    id.textContent = data.id;
+    title.textContent = data.title;
+    body.textContent = data.body;
 
-    const titulopost = document.createElement ("h1")
-    titulopost.textContent = ("Titulo Post:")
-
-    const encabezadopost = document.createElement("h3")
-    encabezadopost.textContent = mostrar.title
-
-    const post = document.createElement ("h1")
-    post.textContent = ("Post:")
-
-    const posteo = document.createElement("h3")
-    posteo.textContent = mostrar.body
-
-    const div= document.createElement("div")
-    div.appendChild (titulouser) 
-    div.appendChild (h1) 
-    div.appendChild (tituloid)
-    div.appendChild (h3)
-    div.appendChild (titulopost)
-    div.appendChild (encabezadopost)
-    div.appendChild (post)
-    div.appendChild (posteo).reset()
-    
-
-    post_container.appendChild(div)
-
+    // STYLE
+    container.classList.remove("hidden");
 }

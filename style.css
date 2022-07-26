@@ -90,6 +90,10 @@ body {
     color: red;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 .logo.container {
     width: 96%;
     max-width: 960px;
