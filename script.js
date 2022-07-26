@@ -1,9 +1,16 @@
-const input = document.querySelector("searchinput")
-const button = document.querySelector("button")
-const postcontainer = document.querySelector("post-container")
+const input = document.getElementById("form_input")
+const button = document.getElementById("btn_submit")
+const postcontainer = document.getElementById("post_container")
 
-function traerPost(){
-    fetch("https://jsonplaceholder.typicode.com/posts/1") 
+button.addEventListener('click', (e) => {
+    e.preventDefault()
+    traerPost(input.value)
+    
+})
+
+
+function traerPost(mostrar){
+    fetch(`https://jsonplaceholder.typicode.com/posts/${mostrar}/`) 
     
     .then ((res) => res.json())
     .then((data) => {
@@ -24,11 +31,17 @@ function crearPost(mostrar){
     const h3 = document.createElement("h3")
     h3.textContent = mostrar.id
 
-    const titulopost = document.createElement ("h3")
+    const titulopost = document.createElement ("h1")
     titulopost.textContent = ("Titulo Post:")
 
     const encabezadopost = document.createElement("h3")
     encabezadopost.textContent = mostrar.title
+
+    const post = document.createElement ("h1")
+    post.textContent = ("Post:")
+
+    const posteo = document.createElement("h3")
+    posteo.textContent = mostrar.body
 
     const div= document.createElement("div")
     div.appendChild (titulouser) 
@@ -37,8 +50,10 @@ function crearPost(mostrar){
     div.appendChild (h3)
     div.appendChild (titulopost)
     div.appendChild (encabezadopost)
+    div.appendChild (post)
+    div.appendChild (posteo).reset()
+    
 
     post_container.appendChild(div)
-}
 
-traerPost()
+}

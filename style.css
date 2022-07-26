@@ -33,7 +33,7 @@ body {
 }
 
 
-.form-imput {
+.form_input {
     border-color: lightgray;
     outline: none;
     border-width: 1px;
@@ -60,7 +60,7 @@ body {
     text-align: center;
 }
 
-.btn-submit {
+.btn_submit {
     width: 50%;
     text-align: center;
     height: 35px;
@@ -77,7 +77,7 @@ body {
     border: 1px;
 }
 
-.btn-submit:hover {
+.btn_submit:hover {
     background-color: rgb(161, 158, 158);
 
 }
