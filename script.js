@@ -11,6 +11,14 @@ function traerPost(mostrar){
 
     // validar la información select
     // Obtienes valor del select
+    .then(function(data){
+        data.foreach(function(element){
+            const miSelect = document.getElementById("select1")
+            let opt = document.createElement("option")
+            opt.appendChild(document.createTextNode(data.element))
+            opt.value=data.id
+        })
+    })
     fetch(`https://jsonplaceholder.typicode.com/posts/${mostrar}/`) 
     .then ((res) => res.json())
     .then((data) => {
